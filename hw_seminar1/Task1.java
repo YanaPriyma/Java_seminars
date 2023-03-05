@@ -10,20 +10,18 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        System.out.println("Введите число n: ");
-        Scanner scanner = new Scanner(System.in, "Cp866");
-        int n = scanner.nextInt();
+        System.out.print("Введите число n: ");
+        Scanner number = new Scanner(System.in);
+        int n = number.nextInt();
 
         int triangle = 0;
-        for (int i = 1; i <= n; i++) {
-            triangle += i;
-        }
-        System.out.println("Треугольное число => " + triangle);
-
         int factorial = 1;
         for (int i = 1; i <= n; i++) {
+            triangle += i;
             factorial *= i;
         }
+
+        System.out.println("Треугольное число => " + triangle);
         System.out.println("n! => " + factorial);
     }
 }
